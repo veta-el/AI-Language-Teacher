@@ -1,9 +1,9 @@
 AI Language Teacher
 
 The basis of a web application for practicing foreign languages with a local and customized AI assistant (using the example of a Russian-English dialogue).
-It consists of two blocks - **Frontend** with a web interface and its elements, **AI_Core** with folders for additional models, server-client logic and interaction with the local LLM.
+It consists of two blocks - Frontend with a web interface and its elements, AI_Core with folders for additional models, server-client logic and interaction with the local LLM.
 
-## Features:
+Features:
 Communication with the LLM teacher through written input and audio input (microphone element)
 Selecting additional options from the upper-right menu:
 * Getting error analysis of the text
@@ -12,21 +12,22 @@ Selecting additional options from the upper-right menu:
 * Audio messages from the AI teacher
 * Displaying the message translation
 
-## How to set up and use (tested on this set of settings):
+How to set up and use (tested on this set of settings):
 * Python 3.9
 * Virtual environment with requirements.txt
 * Installing Ollama
-* Loading the required Ollama model (in example `ollama pull deepseek-r1:7b`)
-* Creating a model with a system prompt - **ModelFile** can be modified, requires modification of **env_llm** - MODEL_ID (`ollama create TeacherModel -f path/to/AI_core/ModelFile`)
-* Add folders to **AI_Core**: speechtext_model, textdetox_model, textspeech_model, translation_model
+* Loading the required Ollama model (in example ollama pull deepseek-r1:7b)
+* Creating a model with a system prompt - ModelFile can be modified, requires modification of env_llm - MODEL_ID (ollama create TeacherModel -f path/to/AI_core/ModelFile)
+* Add folders to AI_Core: speechtext_model, textdetox_model, textspeech_model, translation_model
 * Add the necessary models to these folders, in this example were used:
-	* **speechtext_model** - openai/whisper-medium
-	* **textdetox_model** - textdetox/xlmr-large-toxicity-classifier-v2
-	* **textspeech_model** - suno/bark-small
-	* **translation_model** - utrobinmv/t5_translate_en_ru_zh_large_1024
-* Launch the server - **AI_Core/main.py**, websockets are used, port 3000
-* Open the interface - **Frontend/chat.html**
+	* speechtext_model - openai/whisper-medium
+	* textdetox_model - textdetox/xlmr-large-toxicity-classifier-v2
+	* textspeech_model - suno/bark-small
+	* translation_model - utrobinmv/t5_translate_en_ru_zh_large_1024
+* Launch the server - AI_Core/main.py, websockets are used, port 3000
+* Open the interface - Frontend/chat.html
 
-**.env_llm** contains examples of prompts for all described types of queries to the model
+.env_llm contains examples of prompts for all described types of queries to the model
 
 Additionally, a check for the toxicity of incoming and outgoing text is used, which may overly limit the possible topics of the dialogue
+
