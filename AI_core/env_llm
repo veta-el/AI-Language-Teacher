@@ -1,0 +1,33 @@
+MODEL_ID = 'TeacherModel'
+VOICE_PRESET = 'en_speaker_4'
+STOPPER = 'STOP'
+FINAL_PHRASE = 'I will be glad to hear from you again!!'
+
+NOT_ENGLISH_ANSWER = "Let's speak English!"
+NOT_ENGLISH_ANSWER_RUS = 'Давайте будем говорить на английском!'
+
+NOT_HEARD_ANSWER = 'I can not understand you, repeat again, please.'
+NOT_HEARD_ANSWER_RUS = 'Я не очень хорошо вас понимаю, пожалуйста, повторите еще раз.'
+
+NOT_ENGLISH_GENERATION = "Let's change the subject and talk in English."
+NOT_ENGLISH_GENERATION_RUS = "Давайте сменим тему и будем говорить на английском."
+
+LLM_ERROR_ANSWER = 'Ошибка'
+
+IF_TOXIC_ANSWER = "Let's change the subject."
+IF_TOXIC_ANSWER_RUS = 'Давайте сменим тему.'
+
+FIRST_MSG_TRIGGERS = 'Hello! I am your teacher. If you have any questions, please let me know.#How are you? If you want, we can talk.#I am always here to help, if you need anything, do not hesitate to contact me!'
+FIRST_MSG_TRIGGERS_RUS = 'Привет! Я ваш учитель. Если у вас возникнут какие-либо вопросы, пожалуйста, дайте мне знать.#Как у вас дела? Если хотите, мы можем поговорить.#Я всегда здесь, чтобы помочь, если вам что-нибудь понадобится, не стесняйтесь обращаться ко мне!'
+
+USER_INPUT_BLOCK = '# '
+BASIC_ANSWER_PROMPT = "Write a response to the student's request. The student's request is between # #. The response should be short, no more than five sentences."
+CONSIDER_LEVEL_ANSWER_PROMPT = "Write a response to the student's request. The student's request is between # #. The response should be short, no more than five sentences. When answering, use vocabulary and grammar that are appropriate to this language level: "
+
+CHECK_MISTAKES_ANSWER_PROMPT = "Analyze grammatical and lexical errors in student's text. The student's text is between # #. The analysis should be brief, no more than two sentences. "
+SHOW_ANSWERS_PROMPT = 'According to the text, write a possible question. The text is between # #. Answer like a student. The question should be short, no more than one sentence.  Do not add anything extra, just write the question itself. '
+
+TEXT_DETOX_PATH = '/textdetox_model'
+SPEECH_TEXT_PATH = '/speechtext_model'
+TEXT_SPEECH_PATH = '/textspeech_model'
+TRANSLATION_PATH = '/translation_model'
