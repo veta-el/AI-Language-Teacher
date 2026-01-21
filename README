@@ -28,4 +28,5 @@ Selecting additional options from the upper-right menu:
 * Open the interface - **Frontend/chat.html**
 
 **.env_llm** contains examples of prompts for all described types of queries to the model
+
 Additionally, a check for the toxicity of incoming and outgoing text is used, which may overly limit the possible topics of the dialogue
