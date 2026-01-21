@@ -1,0 +1,10 @@
+numpy==2.0.2
+python-dotenv==1.1.1
+websockets==15.0.1
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==2.6.0+cu118
+ollama==0.5.2
+transformers==4.45.2
+langdetect==1.0.9
+scipy==1.13.1
+pydub==0.25.1

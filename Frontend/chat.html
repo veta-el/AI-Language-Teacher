@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Chat</title>
+  <link rel="stylesheet" href="styles_chat.css">
+ </head>
+
+ <body>
+    <div class="topnav">
+        <div id="profile-button"></div>
+        <div id="menu-button"></div>
+    </div>
+	
+    <div id="menu-block">
+        <label class="params">Анализировать ошибки
+            <input class="style-checkbox" type="checkbox" id="param_check_mistakes">
+        </label>
+        <label class="params-column">Предлагать варианты ответа
+            <input class="style-checkbox" type="checkbox" id="param_gen_answers">
+        </label>
+
+        <div class="lang_level_selection">
+            Выбор уровня языка:
+        </div>
+        <select class="list_lang_level" id="select_lang_level"></select>
+        
+        <label class="params-column">Аудиосообщения от учителя
+            <input class="style-checkbox" type="checkbox" id="param_audio_output">
+        </label>
+        <label class="params-column">Показывать перевод
+            <input class="style-checkbox" type="checkbox" id="param_rus">
+        </label>
+    </div>
+
+    <div id="message-container"></div>
+    
+    <div class="typing-space">
+        <input class="text" type="text" id="user_input" placeholder="   Hello！" maxlength="5000">
+        <a class="mic-button f_near_right_2" id="user_input_rec" onclick="toggleImageRec();startRecording();"></a>
+        <a class="send-button f_near_right_1" onclick="submitUserInput()"></a>
+    </div>
+
+    <img id="wait_animation" src="Image/wait.gif">
+
+    <script>
+        const menuDiv = document.getElementById("menu-block");
+        const btn = document.getElementById("menu-button");
+
+        btn.onclick = function() {
+            if (menuDiv.style.display === "none") {
+                menuDiv.style.display = "block";
+            } else {
+                menuDiv.style.display = "none";
+            }
+        };
+    </script>
+
+    <script src="chat_script.js"></script>
+
+    <div class="footer">
+    </div>
+ </body>
+</html>
